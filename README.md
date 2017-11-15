@@ -1,7 +1,13 @@
-# template-webpack-babel
+## template-webpack-babel
 
-2017 Basic Web dev template for newbee, and readers of hugojing/web-lessons.
+>sudo npm install
+
+## 运行
+>npm run dev
+
+## 打包
+>npm run build
 
 ## Usage
 
-click → https://github.com/hugojing/generator-webpack-babel
+click → https://github.com/linjieFE/earth-chart

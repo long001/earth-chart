@@ -178,10 +178,10 @@ const ForceGraph = Kapsule({
 		scene.background = new THREE.Color(0x001128);
 //		scene.background = new THREE.Color(0xffffff);
 //        scene.background = new THREE.TextureLoader().load('assets/img/1.jpeg');
-       render.setClearColor = new THREE.TextureLoader().load('assets/img/1.jpeg');
+
         var light = new THREE.AmbientLight( 0xff0000 );
         scene.add( light );
-//        scene.fog = new THREE.Fog(0xefd1b5);
+        scene.fog = new THREE.Fog(0xffffff,1,1000);
 		scene.add(state.graphScene = new THREE.Group());
 
 
@@ -191,6 +191,7 @@ const ForceGraph = Kapsule({
 
 		// Setup renderer
 		state.renderer = new THREE.WebGLRenderer();
+		state.renderer.setClearColor(0xffffff)
 		domNode.appendChild(state.renderer.domElement);
 
 		// Add camera interaction
@@ -208,7 +209,7 @@ const ForceGraph = Kapsule({
                var mesh = new THREE.Mesh(geom, mat);
                return mesh;
             }
-    		const sphere = createMesh(new THREE.SphereGeometry(300, 100, 100), "assets/img/1.jpeg");
+    		const sphere = createMesh(new THREE.SphereGeometry(500, 100, 100), "assets/img/1.jpeg");
             sphere.rotation.y = 0;
             sphere.position.x = 0;
             scene.add(sphere);

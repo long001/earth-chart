@@ -9,6 +9,10 @@ const dev = {
   devServer: {
     contentBase: SRC_PATH,
     compress: false,
+    //webpack 开发服务器 在这里配置
+    proxy:{
+        '/papp/':'http://ca-core-stg.paic.com.cn'
+    },
     port: 8080,
     historyApiFallback: true
   },
